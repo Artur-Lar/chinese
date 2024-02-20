@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+#word-display {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 5px;
+  font-size: 14px;
+}
+.chinese-word {
+  font-family: "Noto Serif SC", serif;
+}
+.container {
+  height: 100vh;
+  background-image: url(images/sichen.webp);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+}

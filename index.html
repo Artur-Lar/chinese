@@ -12,17 +12,58 @@
   </head>
   <body>
     <div class="container">
-      <label for="word-display">Word:</label>
+      <div class="selector-container">
+        <label class="chinese-word" for="category-select"
+          >Select Category
+        </label>
+        <select id="category-select" onchange="selectCategory(this.value)">
+          <option value="Местоимения">Местоимения</option>
+          <option value="Семья">Семья</option>
+          <option value="Цифры">Цифры</option>
+          <option value="Общение">Общение</option>
+          <option value="География">География</option>
+          <option value="Вопросы">Вопросы</option>
+          <option value="Вспомогательные слова">Вспомогательные слова</option>
+          <option value="Сравнительная степень">Сравнительная степень</option>
+          <option value="Наречия">Наречия</option>
+          <option value="Прилагательные (эмоции)">
+            Прилагательные (эмоции)
+          </option>
+          <option value="Прилагательные">Прилагательные</option>
+          <option value="Существительные">Существительные</option>
+          <option value="Транспорт">Транспорт</option>
+          <option value="Спорт">Спорт</option>
+          <option value="Цвета">Цвета</option>
+          <option value="Части тела">Части тела</option>
+          <option value="Деньги">Деньги</option>
+          <option value="Еда">Еда</option>
+          <option value="Животные">Животные</option>
+          <option value="Места">Места</option>
+          <option value="Навигация">Навигация</option>
+          <option value="Напитки">Напитки</option>
+          <option value="Одежда">Одежда</option>
+          <option value="Погода">Погода</option>
+          <option value="Профессии">Профессии</option>
+          <option value="Семья">Семья</option>
+          <option value="ФИО">ФИО</option>
+          <option value="Глаголы">Глаголы</option>
+          <option value="Счетные слова">Счетные слова</option>
+          <option value="Посела">Посела</option>
+          <option value="Время суток">Время суток</option>
+          <option value="Дни, даты">Дни, даты</option>
+        </select>
+      </div>
       <div id="word-display"></div>
 
       <button onclick="generateRandomWord()">Generate Random Word</button>
-      <button onclick="showTranslation()">Show Translation</button>
+      <!-- <button onclick="showTranslation()">Show Translation</button> -->
 
       <!-- <label for="new-word">Add a New Word:</label>
       <input type="text" id="new-word" placeholder="Enter a new word" />
       <button onclick="addNewWord()">Add Word</button> -->
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="wordList.js"></script>
   </body>
 </html>

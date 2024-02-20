@@ -1,33 +1,68 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin: 20px;
-}
-
-#word-display {
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 button {
-  padding: 10px;
-  font-size: 16px;
+  padding: 10px 15px;
   cursor: pointer;
-  margin-bottom: 10px;
+  background-color: rgb(219, 24, 24);
+  color: rgb(246, 246, 26);
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
 }
 
 input {
   padding: 5px;
   font-size: 14px;
 }
-.chinese-word {
-  font-family: "Noto Serif SC", serif;
+@font-face {
+  font-family: "ChinaCyrRegular";
+  src: url("./fonts/Real\ Chinese.otf") format("truetype");
 }
+#category-select {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* Стилизация опций в выпадающем списке */
+#category-select option {
+  background-color: rgb(219, 24, 24);
+  color: rgb(246, 246, 26);
+}
+#category-select:focus-visible {
+  outline: 2px solid rgb(219, 24, 24);
+}
+
+.chinese-word {
+  font-family: "ChinaCyrRegular", Arial, sans-serif;
+  font-size: 20px;
+}
+.words-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 20px;
+}
+/* .chinese-word {
+  font-family: "Noto Serif SC", serif;
+} */
 .container {
-  height: 100vh;
+  width: 50%;
+  margin: auto;
+  height: 100%;
+  min-height: 100vh;
   background-image: url(images/sichen.webp);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   color: white;
+}
+.selector-container {
+  padding-top: 40px;
+  margin-bottom: 20px;
 }

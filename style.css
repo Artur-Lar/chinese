@@ -13,7 +13,10 @@ button {
   border: none;
   border-radius: 5px;
 }
-
+p {
+  padding-bottom: 15px;
+  margin: 0;
+}
 input {
   padding: 5px;
   font-size: 14px;
@@ -35,10 +38,41 @@ input {
 #category-select:focus-visible {
   outline: 2px solid rgb(219, 24, 24);
 }
+.slider-container {
+  position: fixed;
+  z-index: -1;
+  width: 500px;
+  margin-top: 100px;
+}
+.slider {
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
 
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.image-container img.active {
+  opacity: 0.3;
+}
 .chinese-word {
   font-family: "ChinaCyrRegular", Arial, sans-serif;
   font-size: 20px;
+  font-weight: 900;
 }
 .words-container {
   display: flex;
@@ -56,12 +90,28 @@ input {
   margin: auto;
   height: 100%;
   min-height: 100vh;
-  background-image: url(images/sichen.webp);
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: white;
 }
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    min-height: 100vh;
+  }
+  .image-container img {
+    width: 100vw; /* Устанавливаем ширину изображения на 100% ширины видимой области (viewport width) экрана */
+    height: auto;
+    max-width: none; /* Сбрасываем максимальную ширину изображения */
+  }
+  .words-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
 .selector-container {
   padding-top: 40px;
   margin-bottom: 20px;

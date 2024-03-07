@@ -14,7 +14,6 @@ button {
   border-radius: 5px;
 }
 p {
-  padding-bottom: 15px;
   margin: 0;
 }
 input {
@@ -73,6 +72,8 @@ input {
   font-family: "ChinaCyrRegular", Arial, sans-serif;
   font-size: 20px;
   font-weight: 900;
+  padding-right: 20px;
+  padding-bottom: 15px;
 }
 .words-container {
   display: flex;
@@ -92,11 +93,17 @@ input {
   min-height: 100vh;
 }
 @media (max-width: 768px) {
+  p {
+    padding-bottom: 15px;
+  }
   .container {
     width: 90%;
     margin: auto;
     height: 100%;
     min-height: 100vh;
+  }
+  .slider-container {
+    bottom: 289px;
   }
   .image-container img {
     width: 100vw; /* Устанавливаем ширину изображения на 100% ширины видимой области (viewport width) экрана */
@@ -110,9 +117,16 @@ input {
     width: 90%;
     margin-bottom: 20px;
   }
+  .selector-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .selector-container {
   padding-top: 40px;
   margin-bottom: 20px;
+}
+.generate-container {
+  margin-bottom: 50px;
 }

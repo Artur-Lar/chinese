@@ -21,6 +21,8 @@ window.generateRandomWord = function () {
         <button id="toggle-translation_${currentWordIndex}" onclick="showTranslation(${currentWordIndex})">Показать перевод</button>
       </div>
     `;
+
+  window.scrollTo(0, document.body.scrollHeight);
 };
 
 window.showTranslation = function (index) {
@@ -42,15 +44,4 @@ window.showTranslation = function (index) {
 window.selectCategory = function (category) {
   selectedCategory = category;
   generateRandomWord(); // Перегенерировать слово при выборе раздела
-};
-
-window.addNewWord = function () {
-  const newWordInput = document.getElementById("new-word");
-  const newWord = newWordInput.value.trim();
-
-  if (newWord) {
-    // Пример добавления нового слова и его перевода в список
-    wordList.push({ russian: newWord, chinese: "новый перевод" });
-    newWordInput.value = "";
-  }
 };

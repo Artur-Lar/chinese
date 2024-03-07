@@ -103,7 +103,7 @@ input {
     min-height: 100vh;
   }
   .slider-container {
-    bottom: 289px;
+    bottom: 75vh;
   }
   .image-container img {
     width: 100vw; /* Устанавливаем ширину изображения на 100% ширины видимой области (viewport width) экрана */

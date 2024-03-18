@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -74,6 +74,12 @@ input {
   font-weight: 900;
   padding-right: 20px;
   padding-bottom: 15px;
+}
+.generated-word {
+  font-weight: 900;
+}
+.font-400 {
+  font-family: "ChinaCyrRegular", Arial, sans-serif;
 }
 .words-container {
   display: flex;

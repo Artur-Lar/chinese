@@ -15,9 +15,9 @@ window.generateRandomWord = function () {
   const randomWordPair = filteredWordList[currentWordIndex];
   wordDisplay.innerHTML += `
       <div class="words-container">
-        <p id="russian-word">${randomWordPair.russian}</p>
-        <p class="chinese-word" id="chinese-word_${currentWordIndex}" style="display: none;">Chinese word - ${randomWordPair.chinese}</p>
-        <p id="pinyin-word_${currentWordIndex}" style="display: none;">Pīnyīn - ${randomWordPair.pinyin}</p>
+        <p class="generated-word" id="russian-word">${randomWordPair.russian}</p>
+        <p class="generated-word" id="chinese-word_${currentWordIndex}" style="display: none;"> <span class="font-400"> Chinese word - </span>${randomWordPair.chinese}</p>
+        <p class="generated-word" id="pinyin-word_${currentWordIndex}" style="display: none;"><span class="font-400">Pīnyīn - </span>${randomWordPair.pinyin}</p>
         <button id="toggle-translation_${currentWordIndex}" onclick="showTranslation(${currentWordIndex})">Показать перевод</button>
       </div>
     `;

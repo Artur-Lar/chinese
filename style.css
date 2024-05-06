@@ -5,13 +5,20 @@ body {
 }
 
 button {
-  padding: 10px 15px;
+  padding: 15px 15px;
   cursor: pointer;
-  background-color: rgb(219, 24, 24);
+  background-image: linear-gradient(to top, rgb(189, 23, 23), rgb(145 44 44));
   color: rgb(246, 246, 26);
   font-weight: 700;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+button:hover {
+  border: 2px solid rgba(255, 16, 16, 0.53);
+}
+button:active {
+  border: 2px solid rgb(233, 49, 49);
+  background-image: linear-gradient(to top, rgb(129 10 10), rgb(255, 50, 50));
 }
 p {
   margin: 0;
@@ -70,13 +77,14 @@ input {
 }
 .chinese-word {
   font-family: "ChinaCyrRegular", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: 900;
   padding-right: 20px;
   padding-bottom: 15px;
 }
 .generated-word {
   font-weight: 900;
+  font-size: 30px;
 }
 .font-400 {
   font-family: "ChinaCyrRegular", Arial, sans-serif;
@@ -112,9 +120,9 @@ input {
     bottom: 75vh;
   }
   .image-container img {
-    width: 100vw; /* Устанавливаем ширину изображения на 100% ширины видимой области (viewport width) экрана */
+    width: 100vw;
     height: auto;
-    max-width: none; /* Сбрасываем максимальную ширину изображения */
+    max-width: none;
   }
   .words-container {
     display: flex;

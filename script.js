@@ -1,13 +1,22 @@
 import { wordList } from "./wordList.js";
+import { wordListVerbs } from "./wordListVerbs.js";
 
 let selectedCategory = null;
 let currentWordIndex = -1;
 
+// Объединяем оба списка в одну коллекцию слов
+const combinedWordList = [...wordList, ...wordListVerbs];
+
 window.generateRandomWord = function () {
   const wordDisplay = document.getElementById("word-display");
   const filteredWordList = selectedCategory
-    ? wordList.filter((word) => word.category === selectedCategory)
-    : wordList;
+    ? combinedWordList.filter((word) => word.category === selectedCategory)
+    : combinedWordList;
+
+  if (filteredWordList.length === 0) {
+    wordDisplay.innerHTML = "<p>Нет слов в выбранной категории.</p>";
+    return;
+  }
 
   // Увеличиваем индекс для перехода к следующему слову
   currentWordIndex = (currentWordIndex + 1) % filteredWordList.length;
@@ -43,5 +52,7 @@ window.showTranslation = function (index) {
 
 window.selectCategory = function (category) {
   selectedCategory = category;
+  currentWordIndex = -1; // Сбросить индекс, чтобы начинать с первого слова в новой категории
+  document.getElementById("word-display").innerHTML = ""; // Очистить предыдущие слова
   generateRandomWord(); // Перегенерировать слово при выборе раздела
 };
